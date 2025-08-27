@@ -1,7 +1,7 @@
 import React from "react";
 import FooterColumn from "./FooterColumn";
 import FooterSocial from "./FooterSocial";
-import ImagePath from "../../../assets/ImagePath";
+import ImagePath from "../../../assets/images";
 const Footer = () => {
   const columns = [
     {

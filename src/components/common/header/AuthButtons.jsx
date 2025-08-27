@@ -1,20 +1,19 @@
 import React from "react";
+import Button from "../../ui/Button";
+import { MdWifiCalling3 } from "react-icons/md";
 
 const AuthButtons = ({ setActiveModal }) => {
   return (
     <div className="flex space-x-4">
-      <button
-        onClick={() => setActiveModal("signin")}
-        className="px-4 py-2 bg-blue-500 text-white rounded-md"
-      >
+      <Button className="border border-[#007AFF] p-2 text-sm bg-transparent flex items-center gap-2 text-[#007AFF] rounded-lg"
+        onClick={() => setActiveModal("register")} icon={MdWifiCalling3}>
+        Talk To Expert
+      </Button>
+
+      <Button className="border border-[#007AFF] py-2 px-4 text-sm bg-transparent flex items-center gap-2 text-[#007AFF] rounded-lg"
+        onClick={() => setActiveModal("signin")}>
         Sign In
-      </button>
-      <button
-        onClick={() => setActiveModal("register")}
-        className="px-4 py-2 border border-blue-500 text-blue-500 rounded-md"
-      >
-        Register
-      </button>
+      </Button>
     </div>
   );
 };

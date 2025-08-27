@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import SignInModal from "../auth/SignInModal";
-import OtpModal from "../auth/OtpModal";
-import RegistrationModal from "../auth/RegistrationModal";
-import RoutesPath from "../../../routes";
+import SignInModal from "../modals/SignInModal";
+import SignUpModal from "../modals/SignUpModal";
+import OtpModal from "../modals/OtpModal";
+
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -52,7 +52,7 @@ const Header = () => {
         />
       )}
       {activeModal === "register" && (
-        <RegistrationModal onClose={() => setActiveModal(null)} />
+        <SignUpModal onClose={() => setActiveModal(null)} />
       )}
     </header>
   );
